@@ -1,5 +1,5 @@
 Project Idea:
-Users can search for areas and be provided with info included in MVP. 
+Users can search for areas and be provided with info included in MVP.
 
 MVP
 Weather avg
@@ -19,17 +19,16 @@ Note: account required for API key but supports 1000 free api calls per day
 
 Topography
 - https://developers.google.com/maps/documentation/elevation/requests-elevation#ElevationResult
-Maybe have a google map preview show up for the area being searched since this is utilizing a google maps api anyway? Kind of hard to find decent info about overall terrain. 
+Maybe have a google map preview show up for the area being searched since this is utilizing a google maps api anyway? Kind of hard to find decent info about overall terrain.
 https://developers.google.com/maps/documentation/embed/get-started
 
-This is a stretch but maybe include crime rate? 
-- https://crime-data-explorer.fr.cloud.gov/pages/home - barely any documentation so it’s kind of hard to navigate through the API 
+This is a stretch but maybe include crime rate?
+- https://crime-data-explorer.fr.cloud.gov/pages/home - barely any documentation so it’s kind of hard to navigate through the API
 - https://crime-data-explorer.fr.cloud.gov/pages/docApi
 
-Queue help?
 
-
-
-Economy?
+Economy
 https://www.census.gov/data/developers/data-sets.html
+
 Housing costs? Rent?
+API needed
