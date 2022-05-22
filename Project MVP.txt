@@ -1,0 +1,35 @@
+Project Idea:
+Users can search for areas and be provided with info included in MVP. 
+
+MVP
+Weather avg
+- https://docs.climate.azavea.com/indicators.html - supports historical avg  jk I can’t figure out how to use this API but it seems like a good resource if we can get it to work, maybe we can mess around with it in postman?
+- http://climateapi.scottpinkelman.com/ - general climate type (humid subtropical, hot semi-arid, etc);
+
+Search for a particular location by passing a latitude and longitude:
+- http://climateapi.scottpinkelman.com/api/v1/location/[latitude]/[logintitude]
+
+Severe weather alerts
+- https://www.weather.gov/documentation/services-web-api
+
+Air quality
+- https://openweathermap.org/api/air-pollution
+Long/lat & start/end dates http://api.openweathermap.org/data/2.5/air_pollution/history?lat={lat}&lon={lon}&start={start}&end={end}&appid={API key}
+Note: account required for API key but supports 1000 free api calls per day
+
+Topography
+- https://developers.google.com/maps/documentation/elevation/requests-elevation#ElevationResult
+Maybe have a google map preview show up for the area being searched since this is utilizing a google maps api anyway? Kind of hard to find decent info about overall terrain. 
+https://developers.google.com/maps/documentation/embed/get-started
+
+This is a stretch but maybe include crime rate? 
+- https://crime-data-explorer.fr.cloud.gov/pages/home - barely any documentation so it’s kind of hard to navigate through the API 
+- https://crime-data-explorer.fr.cloud.gov/pages/docApi
+
+Queue help?
+
+
+
+Economy?
+https://www.census.gov/data/developers/data-sets.html
+Housing costs? Rent?
