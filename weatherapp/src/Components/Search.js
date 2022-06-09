@@ -10,11 +10,14 @@ const Search = (props) => {
     let start = Math.floor((new Date().getTime()/1000) - 15780000);
     
     useEffect(() => {
+      if((typeof props.longlat.latitude) == "number"){
         axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${+props.longlat.latitude}&lon=${+props.longlat.longitude}&start=${start}&end=${end}&appid=${process.env.REACT_APP_API_KEY}`)
         .then((res) => {
 
             setPost(res.data.list[0].main.aqi)
         }) 
+        .catch(err => console.log(err))
+      }
     }, [+props.longlat.latitude, +props.longlat.longitude])
 
 
