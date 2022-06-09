@@ -15,7 +15,7 @@ const Search = (props) => {
 
     
     useEffect(() => {
-        axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${+props.longlat.latitude}&lon=${+props.longlat.longitude}&start=${start}&end=${end}&appid=6a2dcec0292abad7463493af751fc78f`)
+        axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${+props.longlat.latitude}&lon=${+props.longlat.longitude}&start=${start}&end=${end}&appid=${process.env.REACT_APP_API_KEY}`)
         .then((res) => {
             console.log(res.data.list[0].main.aqi)
             setPost(res.data.list[0].main.aqi)
