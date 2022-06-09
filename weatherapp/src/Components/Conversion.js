@@ -5,6 +5,7 @@ import Search from "./Search";
 
 
 const handleSearch = (input, setlonglat) => {
+  
   if (input) {
     axios
       .get(`http://api.positionstack.com/v1/forward?access_key=${process.env.REACT_APP_API_KEY1}&query=${input.replace(' ','')}`)
@@ -12,7 +13,9 @@ const handleSearch = (input, setlonglat) => {
   }
 }
 
-const Conversion = (props) => {
+const Conversion = () => {
+  
+
     const[longlat, setlonglat] = useState({});
     const [input, setInput] = useState("");
 

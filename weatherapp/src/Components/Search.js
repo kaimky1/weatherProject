@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-
+console.log(process.env)
 const Search = (props) => {
     
-    const[post, setPost] = useState(null)
-    console.log("This is the longitude", props.longlat.longitude)
-    console.log("This is the latitude", props.longlat.latitude)
-    let end = (new Date().getTime()/1000)
-    let start = (new Date().getTime()/1000) - 15780000;
-    console.log(start)
-    
-    
 
+    const[post, setPost] = useState(null)
+    let end = Math.floor(new Date().getTime()/1000)
+    let start = Math.floor((new Date().getTime()/1000) - 15780000);
     
     useEffect(() => {
         axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${+props.longlat.latitude}&lon=${+props.longlat.longitude}&start=${start}&end=${end}&appid=${process.env.REACT_APP_API_KEY}`)
         .then((res) => {
-            console.log(res.data.list[0].main.aqi)
+
             setPost(res.data.list[0].main.aqi)
         }) 
     }, [+props.longlat.latitude, +props.longlat.longitude])
