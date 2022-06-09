@@ -2,15 +2,20 @@ import { useState } from "react";
 import axios from 'axios';
 import Climate from './Climate';
 
+import Search from "./Search";
+
+
 const handleSearch = (input, setlonglat) => {
+
   if (input) {
     axios
-      .get(`http://api.positionstack.com/v1/forward?access_key=${process.env.REACT_APP_API_KEY1}&query=${input.replace(' ','')}`)
+      .get(`http://api.positionstack.com/v1/forward?access_key=${process.env.REACT_APP_WEATHER_API_KEY}&query=${input.replace(' ','')}`)
       .then((res) => setlonglat(res.data.data[0]))
   }
 }
 
-const Conversion = (props) => {
+const Conversion = () => {
+
     const[longlat, setlonglat] = useState({});
     const [input, setInput] = useState("");
 
@@ -25,6 +30,7 @@ const Conversion = (props) => {
         <h1>{longlat.longitude}</h1>
 
         <Climate longlat={longlat} />
+        <Search longlat = {longlat}/>
     </div>
   )
 }
