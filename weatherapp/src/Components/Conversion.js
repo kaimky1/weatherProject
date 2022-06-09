@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
-import Search from "./Search";
 
+import Search from "./Search";
 
 
 const handleSearch = (input, setlonglat) => {
@@ -15,7 +15,6 @@ const handleSearch = (input, setlonglat) => {
 
 const Conversion = () => {
   
-
     const[longlat, setlonglat] = useState({});
     const [input, setInput] = useState("");
 
