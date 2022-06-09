@@ -2,10 +2,12 @@ import { useState } from "react";
 import axios from 'axios';
 import Search from "./Search";
 
+
+
 const handleSearch = (input, setlonglat) => {
   if (input) {
     axios
-      .get(`http://api.positionstack.com/v1/forward?access_key=3dcfa019ea61dc3b040b9858b46ad629&query=${input.replace(' ','')}`)
+      .get(`http://api.positionstack.com/v1/forward?access_key=${process.env.REACT_APP_API_KEY1}&query=${input.replace(' ','')}`)
       .then((res) => setlonglat(res.data.data[0]))
   }
 }
