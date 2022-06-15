@@ -30,7 +30,7 @@ const Conversion = () => {
         <h1>{longlat.longitude}</h1>
 
         <Climate longlat={longlat} />
-        <Search longlat = {longlat}/>
+        <Search longlat = {longlat} input = {input}/>
     </div>
   )
 }
