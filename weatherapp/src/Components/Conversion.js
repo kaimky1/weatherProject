@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
 import Climate from './Climate';
-
 import Search from "./Search";
+import DisplayMap from "./Map";
 
 
 const handleSearch = (input, setlonglat) => {
@@ -31,6 +31,7 @@ const Conversion = () => {
 
         <Climate longlat={longlat} />
         <Search longlat = {longlat} input = {input}/>
+        <DisplayMap longlat={longlat}/>
     </div>
   )
 }
